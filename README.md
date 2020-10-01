@@ -13,4 +13,4 @@ permalink: ./html/index.html
 :black_small_square: Parcel  
 
 Задание написано мной с нуля,
-посмотреть результат можно по ссылке: [посмотреть задание](https://deryugina.github.io/landing_JRG/docs/)
+посмотреть результат можно по ссылке: [посмотреть задание](https://deryugina.github.io/landing_JRG/)
