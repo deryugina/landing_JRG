@@ -1,0 +1,13 @@
+mixin button (options)
+
+  - var buttonClass = 'button'
+
+  if options.yellowButton
+    - buttonClass += ' button_yellow-button'
+
+  if options.blackButton
+    - buttonClass += ' button_black-button'
+
+  div.button-wrapper
+    img(class='button-emoji' src=options.emojiLink)
+    button(class=buttonClass)= options.buttonText

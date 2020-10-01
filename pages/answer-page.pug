@@ -1,0 +1,10 @@
+//mixin answerPage(options)
+
+  div.answer-page
+    div.answer-page__answers-wrapper
+    //div.answer-page__title-wrapper
+      include ../blocks/pop-up__title/pop-up__title.pug
+        + title({subPopUpText: 'Я хочу знать, когда будет оффлайн', imgAddress: '../images/fine.svg', textClassName: 'pop-up__title'})
+
+    //div.answer-page__paragraph-wrapper
+      p.answer-paragraph

@@ -1,0 +1,19 @@
+mixin coverPage()
+
+  div.cover-page
+    include ../blocks/pop-up/pop-up.pug
+   
+    + popUp({subscribe: true, subPopUpText: 'Я хочу знать, когда будет оффлайн', imgAddress: '../images/fine.svg'})
+
+    + popUp({refuse: true, subPopUpText: 'Отстаньте!', imgAddress: '../images/facepalm.svg'})
+
+    div.cover-page__popups-wrapper
+    include ../blocks/pop-up/pop-up.pug
+   
+    + popUp({answer: true, subscribe: true, subPopUpText: 'Я хочу знать, когда будет оффлайн', imgAddress: '../images/fine.svg'})
+
+    + popUp({answer: true, refuse: true, subPopUpText: 'Отстаньте!', imgAddress: '../images/facepalm.svg'})
+
+    div.cover-page__return-back-wrapper
+      img(class='return-arrow' src='../images/return-arrow.svg')
+      p(class='return-back')='Я кликнул просто посмотреть'

@@ -1,0 +1,59 @@
+mixin popUp (options)
+
+  include ./refuse-options/refuse-option.pug
+
+  - var formClassName = 'pop-up';
+  - var pClassName = 'pop-up__title'
+
+  - formClassName += options.subscribe ? ' pop-up_subscribe' : ' pop-up_refuse'
+
+  //- formClassName += options.answer ? ' pop-up_answer' : ''
+
+  - pClassName += options.subscribe ? ' pop-up__title_sub' : ' pop-up__title_ref'
+
+    if ((options.subscribe === true) && (options.answer === true))
+      - formClassName += ' pop-up_sub-answer'
+
+    if ((options.answer === true) && (options.refuse === true))
+      
+      - formClassName += ' pop-up_ref-answer'
+
+  div(class=formClassName)
+
+    if ((options.answer === true) && (options.refuse === true))
+
+      img(class='img-answer-refuse' src='../images/finger-up.svg')
+      p(class='paragraph-answer-refuse')='Спасибо, что поделились!'
+
+    else
+
+      div(class='pop-up__title-wrapper')
+        img(src=options.imgAddress class='form-image')
+        p(class=pClassName)= options.subPopUpText
+
+    if (options.answer !== true)
+
+      form( action='#' name='popUp')
+
+      if (options.subscribe === true)
+        div(class='pop-up__input-wrapper')
+
+          input(class='pop-up__input' type='email' placeholder='Укажите email' value='')
+          button(class='pop-up__subscribe-button' type='submit' value='')='Подписаться'
+
+        p(class='pop-up__explanation')= 'Нажимая на кнопку вы соглашаетесь на обработку'
+          a(class='pop-up__link' href='#')= ' персональных данных'
+      else
+        div.refuse-options-wrapper
+
+          include ./refuse-options/refuse-option.pug
+
+          + refuseOption({optionText: 'Вы цены свои видели?', idName: 'option-1'})
+          + refuseOption({optionText: 'Доклады ни о чем', idName: 'option-2'})
+          + refuseOption({optionText: 'У вас там всё хорошо?', idName: 'option-3'})
+          + refuseOption({optionText: 'Денег нет, но вы держитесь', idName: 'option-4'})
+    else 
+      if (options.subscribe === true) 
+
+        div.pop-up__input-wrapper_answer
+          p.paragraph-answer-subscribe='Спасибо, что подписались на нашу рассылку!'
