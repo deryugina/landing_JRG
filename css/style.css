@@ -174,11 +174,22 @@
   }
 
   .first-page {
-    background:url(../images/opacity-keyboard.png) center center fixed no-repeat,
-    url(../images/lines-2-back.svg) center center fixed no-repeat;
-    /*animation: lines 5s linear infinite;*/
+    background:url(../images/opacity-keyboard.png) center center no-repeat,
+    url(../images/lines-2-back.svg) center center no-repeat;
   }
+
 }
+
+/*.first-page {
+  background:url(../images/opacity-keyboard.png) center center no-repeat,
+  url(../images/lines-2-back.svg) center center no-repeat;
+  animation: lines 5s linear infinite;
+}
+
+@keyframes lines {
+  from {background-position: center center;}
+  to {background-position: left center;}
+}*/
 
 @media only screen and (max-width: 480px) {
 
