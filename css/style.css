@@ -64,7 +64,6 @@
     width: 508px;
     font-size: 18px;
     line-height: 27px;
-    /*margin-top: 150px;*/
   }
 
   .buttons-wrapper {
@@ -172,24 +171,17 @@
     margin-bottom: 192px;
     font-size: 14px;
   }
+  
+  .first-page {
+    position: relative;
+  }
 
   .first-page {
-    background:url(../images/opacity-keyboard.png) center center no-repeat,
-    url(../images/lines-2-back.svg) center center no-repeat;
+    background: url(../images/opacity-keyboard.png) no-repeat,
+    url(../images/lines-gif.gif) no-repeat 50% 60%;
   }
 
 }
-
-/*.first-page {
-  background:url(../images/opacity-keyboard.png) center center no-repeat,
-  url(../images/lines-2-back.svg) center center no-repeat;
-  animation: lines 5s linear infinite;
-}
-
-@keyframes lines {
-  from {background-position: center center;}
-  to {background-position: left center;}
-}*/
 
 @media only screen and (max-width: 480px) {
 
@@ -260,16 +252,15 @@
   }
 
   .refuse-options-wrapper {
-    width: 215px;
-    /*height: 280px;
-    margin: 70px 0px;*/
+    height: 180px;
+    /*margin: 70px 0px;*/
     margin-top: 48px;
     margin-bottom: 40px;
   }
 
   .refuse-option {
     font-size: 12px;
-    padding: 10px 0px;
+    padding: 10px 15px;
   }
 
   .pop-up__title-wrapper,
@@ -332,16 +323,9 @@
   }
 
   .first-page {
-    background: url(../images/keyboard-back.png) 100% 15% no-repeat,
-    url(../images/mini-lines.svg) no-repeat;
-
-    /*animation: lines 5s linear infinite;*/
+    background: url(../images/keyboard-back.png) no-repeat 100% 20%,
+    url(../images/mini-lines-gif.gif) no-repeat fixed 100% -10%;
   }
-
-  /*@keyframes lines {
-    from {background-position: right center;}
-    to {background-position: left center;}
-  }*/
 
 }
 
@@ -541,4 +525,11 @@
   position: absolute;
   top: 0px;
   left: 0px;
+}
+
+.svg-image {
+  position: absolute;
+  top: 0;
+  right: 100px;
+  z-index: 10;
 }

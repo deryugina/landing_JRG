@@ -1,20 +1,32 @@
 mixin firstPage()
 
   div.first-page
-      img(src='../images/Group.svg' class='logo-jrg')
-      h1.first-page-title= 'Конференции, которые нужны' 
-      p.text-paragraph 
-        | Мы JUG Ru Group делаем крупнейшие конференции для программистов и сочувствующих.
-      p.text-paragraph 
-        | С нас - крутая программа, топовые спикеры, технические доклады без воды. 
-      p.text-paragraph 
-        | С вас - готовность смотреть и общаться.
 
-      div.buttons-wrapper
-        include ../blocks/button/button.pug 
 
-        + button({yellowButton: 'true', emojiLink: '../images/fine.svg', buttonText: 'Купить билет'})
+    img(src='../images/Group.svg' class='logo-jrg')
+    h1.first-page-title= 'Конференции, которые нужны' 
+    p.text-paragraph 
+      | Мы JUG Ru Group делаем крупнейшие конференции для программистов и сочувствующих.
+    p.text-paragraph 
+      | С нас - крутая программа, топовые спикеры, технические доклады без воды. 
+    p.text-paragraph 
+      | С вас - готовность смотреть и общаться.
 
-        + button({blackButton: 'true', emojiLink: '../images/facepalm.svg', buttonText: 'Послать'})
+    div.buttons-wrapper
+      include ../blocks/button/button.pug 
 
-      script(defer src='../js/script.js') 
+      + button({yellowButton: 'true', emojiLink: '../images/fine.svg', buttonText: 'Купить билет'})
+
+      + button({blackButton: 'true', emojiLink: '../images/facepalm.svg', buttonText: 'Послать'})
+
+    script(defer src='../js/script.js') 
+
+  //svg(width='1400' height='800' xmlns="https://www.w3.org/2000/svg" class="svg-image")
+      clipPath(id='clip-back-1400')
+        circle(r="500" cx="100" cy="100" fill="black")
+        polygon(points="1400,0 1400,580 955,580 635,260 895,0 1400,0" fill="black" class="svg-image")
+
+    svg(width='260' height='165' xmlns="https://www.w3.org/2000/svg" class="svg-image")
+      clipPath(id='clip-back-320')
+        polygon(points="1400,0 1400,165 1210,165 1140,50 1250,0" fill="black")
+    img(src='../images/l-i-n-e-s.png' class='lines-back')
