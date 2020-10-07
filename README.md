@@ -1,7 +1,5 @@
 # landing_JRG  
 
-permalink: ./html/index.html
-
 :octocat: Этот репозиторий предназначен для выполнения мной задания
 по адаптивной вёрстке сайта по макету в рамках обучающей прогаммы.
 
@@ -13,4 +11,4 @@ permalink: ./html/index.html
 :black_small_square: Parcel  
 
 Задание написано мной с нуля,
-посмотреть результат можно по ссылке: [посмотреть задание](https://deryugina.github.io/landing_JRG/)
+посмотреть результат можно по ссылке: [посмотреть задание](https://deryugina.github.io/landing_JRG/html/)
